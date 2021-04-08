@@ -4,4 +4,4 @@ ADD https://github.com/containernetworking/plugins/releases/download/${version}/
 RUN mkdir /plugins && \
       tar -zxvf /cni-plugins-linux-amd64-${version}.tgz -C /plugins && \
       rm /cni-plugins-linux-amd64-${version}.tgz
-CMD cp /plugins/* /opt/cni/bin
+CMD cp /plugins/macvlan /opt/cni/bin/macvlan
